@@ -1,0 +1,26 @@
+[project]
+name = "rjango"
+version = "0.3.3"
+description = "rjango is a tool that automatically generates up and down migration files for rust sqlx"
+authors = [
+    { name = "hushoujier@qq.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10,<4"
+dependencies = [
+    "django (>=5.1.5,<6.0.0)",
+    "typer (>=0.15.1,<0.16.0)",
+    "django-environ (>=0.12.0,<0.13.0)",
+]
+
+[tool.poetry.scripts]
+rjango = "rjango.main:application"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "<3"
+pylint-quotes = "^0.2.3"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
