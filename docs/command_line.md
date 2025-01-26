@@ -1,4 +1,14 @@
-# `rjango`
+# command line document
+
+- [command line document](#command-line-document)
+  - [`rjango`](#rjango)
+    - [`rjango init`](#rjango-init)
+    - [`rjango add`](#rjango-add)
+    - [`rjango inspect`](#rjango-inspect)
+    - [`rjango debug`](#rjango-debug)
+
+
+## `rjango`
 
 **Usage**:
 
@@ -19,7 +29,7 @@ $ rjango [OPTIONS] COMMAND [ARGS]...
 * `inspect`: Generate models in reverse using...
 * `debug`: Obtaining Debugging information
 
-## `rjango init`
+### `rjango init`
 
 Initialize the migration folder
 
@@ -34,7 +44,7 @@ $ rjango init [OPTIONS]
 * `--example / --no-example`: Whether to include a example file  [default: no-example]
 * `--help`: Show this message and exit.
 
-## `rjango add`
+### `rjango add`
 
 Add migration file
 
@@ -48,7 +58,7 @@ $ rjango add [OPTIONS]
 
 * `--help`: Show this message and exit.
 
-## `rjango inspect`
+### `rjango inspect`
 
 Generate models in reverse using database tables
 
@@ -62,7 +72,7 @@ $ rjango inspect [OPTIONS]
 
 * `--help`: Show this message and exit.
 
-## `rjango debug`
+### `rjango debug`
 
 Obtaining Debugging information
 

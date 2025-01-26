@@ -5,6 +5,24 @@
 rjango is a tool that automatically generates up and down migration files for rust sqlx
 
 
+- [Rjango](#rjango)
+  - [Dependency](#dependency)
+  - [Advantage](#advantage)
+  - [Document](#document)
+  - [Quick Start](#quick-start)
+    - [create new project](#create-new-project)
+    - [create python virtual environment](#create-python-virtual-environment)
+    - [install rjango](#install-rjango)
+    - [create .env file and set DATABASE\_URL](#create-env-file-and-set-database_url)
+    - [rjango init](#rjango-init)
+    - [rjango add](#rjango-add)
+    - [sqlx migrate run](#sqlx-migrate-run)
+    - [change model](#change-model)
+    - [redo rjango add](#redo-rjango-add)
+    - [redo sqlx migrate run](#redo-sqlx-migrate-run)
+    - [sqlx migrate revert](#sqlx-migrate-revert)
+
+
 
 ## Dependency
 
@@ -27,8 +45,8 @@ rjango is a tool that automatically generates up and down migration files for ru
 
 ---
 
-* command line
-* tutorial
+* [commnad line](https://github.com/hushoujier/rjango/blob/main/docs/command_line.md)
+* [tutorial](https://github.com/hushoujier/rjango/blob/main/docs/tutorial.md)
 
 ## Quick Start
 
@@ -274,7 +292,7 @@ rjango_example$ sqlx migrate run
 Applied 2/migrate created20250126 (3.570937ms)
 ```
 
-### migrate revert
+### sqlx migrate revert
 
 ```shell
 rjango_example$ sqlx migrate revert --target-version 1
