@@ -1,6 +1,6 @@
 [project]
 name = "rjango"
-version = "0.3.4"
+version = "0.3.5"
 description = "rjango is a tool that automatically generates up and down migration files for rust sqlx"
 authors = [
     { name = "hushoujier@qq.com" }
