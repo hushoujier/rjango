@@ -43,6 +43,7 @@ def init(
     target = utils.get_target()
     if not Path(target).exists():
         shutil.copytree(template, target)
+        return
     rich.print(f'[Error] {target} has exists')
 
 
