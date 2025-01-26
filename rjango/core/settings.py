@@ -19,7 +19,7 @@ __all__ = ['SETTINGS']
 
 env = environ.Env()
 environ.Env.read_env(os.path.join(str(get_base_dir()), '.env'))
-databases = env.db('DATABASE_URL', {})
+databases = env.db('DATABASE_URL', None)
 if not databases:
     rich.print('[Error] the .env file must contain the DATABASE_URL')
     raise typer.Abort()
