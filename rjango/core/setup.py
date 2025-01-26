@@ -7,15 +7,14 @@
 @ZhDescription    :
 @EnDescription    :
 """
-import django
-from django.conf import settings
-
-from rjango.core.settings import SETTINGS
 
 
 def setup():
     """
     setup core
     """
+    import django
+    from django.conf import settings
+    from rjango.core.settings import SETTINGS
     settings.configure(**SETTINGS)
     django.setup()

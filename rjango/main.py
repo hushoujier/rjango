@@ -14,6 +14,7 @@ import sys
 from pathlib import Path
 from typing import Iterator
 
+import rich
 from django.core.management import call_command
 from typer import Typer, Option
 
@@ -36,11 +37,13 @@ def init(
     """
     Initialize the migration folder
     """
-    template = f'{Path(__file__).resolve().parent.parent / "migrations_template/empty"}'
+    template = f'{Path(__file__).resolve().parent / "migrations_template/empty"}'
     if example:
-        template = f'{Path(__file__).resolve().parent.parent / "migrations_template/example"}'
+        template = f'{Path(__file__).resolve().parent / "migrations_template/example"}'
     target = utils.get_target()
-    shutil.copytree(template, target)
+    if not Path(target).exists():
+        shutil.copytree(template, target)
+    rich.print(f'[Error] {target} has exists')
 
 
 @application.command()
